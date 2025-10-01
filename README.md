@@ -1,11 +1,11 @@
-# 🚀 Mint - Ultra-Fast Python Package Manager
+# 🚀 Mint - Package Manager
 
 [![PyPI version](https://badge.fury.io/py/mnt.svg)](https://badge.fury.io/py/mnt)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Rust](https://img.shields.io/badge/rust-2021-orange.svg)](https://www.rust-lang.org/)
 
-**Mint** is a next-generation Python package manager built with Rust for maximum performance. It's designed to be a drop-in replacement for pip, and aims to be a universal package manager for both Python and JavaScript/TypeScript (npm) ecosystems. Mint is still in active development: in some cases, it's faster than [uv](https://github.com/astral-sh/uv), and in others, a bit slower. Upcoming releases will add JavaScript and TypeScript package management, making Mint a universal, blazing-fast replacement for both npm and pip.
+**Mint** is a package manager built with Rust for maximum performance. It's designed to be a drop-in replacement for pip, and aims to be a universal package manager for both Python and JavaScript/TypeScript (npm) ecosystems. Mint is still in active development: in some cases, it's faster than [uv](https://github.com/astral-sh/uv), and in others, a bit slower. Upcoming releases will add JavaScript and TypeScript package management, making Mint a universal, blazing-fast replacement for both npm and pip.
 
 ## 🏆 Performance
 
