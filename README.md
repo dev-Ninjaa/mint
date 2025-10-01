@@ -5,12 +5,12 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Rust](https://img.shields.io/badge/rust-2021-orange.svg)](https://www.rust-lang.org/)
 
-**Mint** is a next-generation Python package manager built with Rust for maximum performance. It's designed to be a drop-in replacement for pip with significant speed improvements.
+**Mint** is a next-generation Python package manager built with Rust for maximum performance. It's designed to be a drop-in replacement for pip, and aims to be a universal package manager for both Python and JavaScript/TypeScript (npm) ecosystems. Mint is still in active development: in some cases, it's faster than [uv](https://github.com/astral-sh/uv), and in others, a bit slower. Upcoming releases will add JavaScript and TypeScript package management, making Mint a universal, blazing-fast replacement for both npm and pip.
 
 ## 🏆 Performance
 
-- **2.4x faster** than pip for individual packages
-- **4.9x faster** than pip for bulk installations
+- **Comparable to uv**: In some benchmarks, Mint is faster than uv, and in others, slightly slower. Performance is improving rapidly with each release.
+- **Much faster than pip** for most workflows
 - **100% compatibility** with existing pip workflows
 - **Parallel downloads** with intelligent caching
 
@@ -79,11 +79,13 @@ mint run myproject "print('Hello from Mint!')"
 
 ## 📊 Performance Comparison
 
-| Package Manager | Individual (5 pkgs) | Bulk (8 pkgs) | Speedup |
-|----------------|-------------------|---------------|---------|
-| **Mint**       | **7.30s**         | **2.00s**     | **1.0x** |
-| pip            | 17.85s            | 9.82s         | 2.4x slower |
-| uv             | 5.03s             | 1.02s         | 0.7x faster |
+Mint is now **comparable to uv**: in some cases, Mint is faster, and in others, uv leads. Both are significantly faster than pip. Performance is a moving target as Mint is under active development.
+
+| Package Manager | Individual (5 pkgs) | Bulk (8 pkgs) | Notes |
+|----------------|---------------------|---------------|-------|
+| **Mint**       | 7.30s               | 2.00s         | Sometimes faster than uv |
+| pip            | 17.85s              | 9.82s         | Much slower |
+| uv             | 5.03s               | 1.02s         | Sometimes faster than Mint |
 
 ## 🔧 Commands
 
@@ -100,6 +102,8 @@ mint run myproject "print('Hello from Mint!')"
 | `cache-clean` | Clean old cache files |
 | `install-requirements` | Install from requirements.txt |
 | `freeze` | Generate requirements.txt |
+| *(upcoming)* `js-install` | Install JavaScript/TypeScript packages (npm replacement) |
+| *(upcoming)* `js-freeze` | Generate package.json/lockfile for JS/TS |
 
 ## 🛠️ Development
 
@@ -112,7 +116,7 @@ mint run myproject "print('Hello from Mint!')"
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/mint.git
+git clone https://github.com/dev-Ninjaa/mint.git
 cd mint
 
 # Install in development mode
@@ -131,12 +135,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📞 Support
-
-- 📧 Email: mint@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/mint/issues)
-- 📖 Documentation: [GitHub Wiki](https://github.com/yourusername/mint/wiki)
-
 ## 🙏 Acknowledgments
 
 - Built with [Rust](https://www.rust-lang.org/) for maximum performance
@@ -145,4 +143,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-**Made with ❤️ by the Mint Development Team**
+**Made by the Mint Development Team**
+
+---
+
+> **Note:** Mint is under active development. JavaScript and TypeScript package management is coming soon, making Mint a universal, much faster replacement for both npm and pip.
