@@ -1,0 +1,15 @@
+[project]
+name = "mnt"
+version = "0.1.0"
+description = "Ultra-fast Python package manager (Mint)"
+authors = [{ name = "ninja" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61.0","wheel","setuptools-rust"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+mint = "mint.cli:main"
