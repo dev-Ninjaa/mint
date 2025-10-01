@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include pyproject.toml
+recursive-include mint_py *
+recursive-include mint_core/src *
+include mint_core/Cargo.toml
+include mint_core/Cargo.lock
